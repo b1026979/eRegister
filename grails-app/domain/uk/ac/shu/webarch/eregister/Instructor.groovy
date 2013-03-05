@@ -4,8 +4,8 @@ package uk.ac.shu.webarch.eregister
 the Instractor class has a name and ID attitude */
 class Instructor {
 
-string name
-string staffid
+String name
+String staffid
 
 /*there is a set of classes for one instractor so the association is one instructor to many classes */ 
 
