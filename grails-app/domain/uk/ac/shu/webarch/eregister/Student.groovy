@@ -13,8 +13,8 @@ class Student {
 
   /* this is the form of doing the hasMany structure as a list */
   static hasMany = [
-	course:Enrollment,
-	classAtt:RegisterEntry
+	courses:Enrollment,
+	classAtts:RegisterEntry
   ]
 
   static mappedBy = [
@@ -23,7 +23,7 @@ class Student {
   ]
 
   static mapping = {
-  notes culomn: 'student_notes', type:text;
+  notes column: 'student_notes', type:'text';
 
   }
 
