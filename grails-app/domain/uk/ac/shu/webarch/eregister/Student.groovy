@@ -1,9 +1,35 @@
 package uk.ac.shu.webarch.eregister
 
 class Student {
-	String name
+	String fullStudentName
 	String studentNumber
-	
-	static maapedBy = [ classes:'student']
-  	static hasMany-registerEntry = [ class:RegisterEntry]
+	String studentNotes
+
+/* Name of the courses that student enrolled on */
+Set courses
+
+/* decleares the set of the classes that student attended on */
+Set classesAtts
+
+/* this is the form of doing the hasMany structure as a list */
+static hasMany = [
+	course:Enrollment,
+	classAtt:RegisterEntry
+]
+
+static mappedBy = [
+	courses :'student',
+	classAtt:'student'
+]
+
+static mapping = {
+notes culomn: 'student_notes', type:text;
+
+}
+
+static constraints = {
+fullStudentName(nullable:false, blank:false, maxsize:256) ;
+studentNumber(nullable:false, blank:false, maxsize:256);	
+}
+
 }

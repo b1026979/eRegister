@@ -11,16 +11,8 @@ String staffid
 
 Set classes
 
-	static mappedBy = [classes: 'instructor']
-
-
-	static hasMany =[ classes: RegClass]
-
-
-Set classes
-
 /* in here we declear the other side of the joint which is many classes and is called the RegClass */
-static hasmany = [classes : RegClass]
+static hasMany = [classes : RegClass]
 
 /* in the other side of the class which is decleared as RegClass
 we have the instractur name which comes back to Instroctur */
