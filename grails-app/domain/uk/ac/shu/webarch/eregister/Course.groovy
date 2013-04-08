@@ -16,7 +16,7 @@ Set classes
 
  courseCode maxSize : 20
     }
-static hasMany = [classes: 'RegClass']
+static hasMany = [classes: RegClass]
 static mappedby = [classes : 'course']
 
 /* changing the database column names from courseName, courseCode and description
