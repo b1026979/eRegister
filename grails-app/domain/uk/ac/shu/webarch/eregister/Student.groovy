@@ -23,7 +23,7 @@ class Student {
   ]
 
   static mapping = {
-  notes column: 'student_notes', type:'text';
+  // notes column: 'student_notes', type:'text';
 
   }
 
