@@ -2,31 +2,30 @@ package uk.ac.shu.webarch.eregister
 
 class RegistrationSheet {
 
-/* the course name for the sheet */
-Course course 
+  /* the course name for the sheet */
+  Course course 
 
-/* date of the sheet */
- Date sheetDate
+  /* date of the sheet */
+  Date sheetDate
 
-/* signatories */
-Set signatories
+  /* signatories */
+  Set signatories
+  
+  String notes
 
-String notes
+  static hasMany = [signatories: RegisterEntry]
+  static mappedby = [classes : 'student']
 
-static constraints = {
+  static constraints = {
+    course(nullable:false, blank:false);
+    sheetDate(nullable:false, blank:false);
+    notes(nullable:false, blank:false);
+  }
 
-Course(nullable:false, blank:false);
-sheetDate(nullable:false, blank:false);
-note(nullable:false, blank:false);
+  static mapping = {
+    notes column: 'course_desc', type:'text';
 
-}
+  }
 
-static mapping = {
-notes culomn: 'course_desc', type:text;
-
-}
-
-static hasMany = [classes: RegisterEntry]
-static mappedby = [classes : 'student']
 
 }

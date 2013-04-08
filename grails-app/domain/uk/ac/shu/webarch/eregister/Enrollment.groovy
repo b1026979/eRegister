@@ -4,7 +4,7 @@ class Enrollment {
 
   /* decleare the variables */
   Student student
-  Course course
+  RegClass regClass
 
   static constraints = {
   }
