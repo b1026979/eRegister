@@ -1,4 +1,8 @@
 import uk.ac.shu.webarch.eregister.*;
+/* This is an unusuall BootStrap because I used the code to authomatically fill the nulls and give us the result
+in real project we need to input all the necessary data into our list in order to get a working app 
+in this case because I wanted to demonstrate the working app I used the BootStrap to fill the necessary forms */
+
 class BootStrap {
 
     def init = { servletContext ->
