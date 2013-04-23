@@ -13,7 +13,37 @@ class BootStrap {
 
 	def web_arch_course = Course.findByCourseCode('443343dd') ?: new Course(courseCode:'443343dd',
                                                                                 courseName:'Web Archs',
-                                                                                courseDescription:'my optional choise').save()
+                                                                                courseDescription:'my optional choice').save();
+
+        def monday_pm_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Monday') ?:
+                                                                      new RegClass(name: 'WebArch-Mondays',
+                                                                      classInstructor:ian_instructor,
+                                                                      course:web_arch_course).save();
+        def tuesday_pm_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Monday') ?:
+                                                                      new RegClass(name: 'WebArch-Tuesdays',
+                                                                      classInstructor:ian_instructor,
+                                                                      course:web_arch_course).save();
+
+        def student_a = Student.findByStudentNumber('A111') ?:
+                      new Student(studentNumber:'A111', fullStudentName:'Student Fred', notes:'Student Fred Notes').save();
+        def student_b = Student.findByStudentNumber('B111') ?:
+                      new Student(studentNumber:'B111', fullStudentName:'Student James', notes:'Student James Notes').save();
+        def student_c = Student.findByStudentNumber('C111') ?:
+                      new Student(studentNumber:'C111', fullStudentName:'Student Gill', notes:'Student Gill Notes').save();
+        def student_d = Student.findByStudentNumber('D111') ?:
+                      new Student(studentNumber:'D111', fullStudentName:'Student Freda', notes:'Student Freda Notes').save();
+
+
+        def student_a_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_a,monday_pm_class)
+
+        def student_b_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_b,monday_pm_class)
+
+        def student_c_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_c,tuesday_pm_class)
+
+        def student_d_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_d,tuesday_pm_class)
+        
+        
+        
 
     }
     def destroy = {
