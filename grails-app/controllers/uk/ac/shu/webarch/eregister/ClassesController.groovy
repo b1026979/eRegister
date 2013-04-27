@@ -11,7 +11,7 @@ import grails.converters.*
         result.classList= []
         
         RegClass.findAll() each { cls ->
-          result.classList.add([InstructorName:cls.classInstructor.name,
+          result.classList.add([instructorName:cls.classInstructor.name,
                                 courseName:cls.course.courseName, 
                                 className:cls.name])
         }
