@@ -28,6 +28,12 @@
 		<p>
 		<g:link controller="Enrollment">Manage Enrollment</g: link>
 		</p>
+		<p><lo>
+		<g:link controller="Classes">Manage Classes</g: link>
+			<li><g:link controller="Classes.json">json format</g: link>
+			<li><g:link controller="Classes.xml">xml format</g: link>
+		</p></lo>
+
 	</body>
 </html>
 
