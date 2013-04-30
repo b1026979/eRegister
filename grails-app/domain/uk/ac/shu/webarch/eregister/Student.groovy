@@ -29,7 +29,8 @@ class Student {
 
   static constraints = {
   fullStudentName(nullable:false, blank:false, maxsize:256) ;
-  studentNumber(nullable:false, blank:false, maxsize:256);	
+  studentNumber(nullable:false, blank:false, maxsize:256);
+  studentNotes(nullable:true);	
   }
 
 }

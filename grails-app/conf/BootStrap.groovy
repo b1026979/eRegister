@@ -25,22 +25,25 @@ class BootStrap {
                                                                       course:web_arch_course).save();
 
         def student_a = Student.findByStudentNumber('A111') ?:
-                      new Student(studentNumber:'A111', fullStudentName:'Student Fred', notes:'Student Fred Notes').save();
+                      new Student(studentNumber:'A111', fullStudentName:'Student Fred', studentNotes:'Student Fred Notes').save();
         def student_b = Student.findByStudentNumber('B111') ?:
-                      new Student(studentNumber:'B111', fullStudentName:'Student James', notes:'Student James Notes').save();
+                      new Student(studentNumber:'B111', fullStudentName:'Student James', studentNotes:'Student James Notes').save();
         def student_c = Student.findByStudentNumber('C111') ?:
-                      new Student(studentNumber:'C111', fullStudentName:'Student Gill', notes:'Student Gill Notes').save();
+                      new Student(studentNumber:'C111', fullStudentName:'Student Gill', studentNotes:'Student Gill Notes').save();
         def student_d = Student.findByStudentNumber('D111') ?:
-                      new Student(studentNumber:'D111', fullStudentName:'Student Freda', notes:'Student Freda Notes').save();
+                      new Student(studentNumber:'D111', fullStudentName:'Student Freda', studentNotes:'Student Freda Notes').save();
 
 
         def student_a_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_a,monday_pm_class)
-
         def student_b_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_b,monday_pm_class)
-
         def student_c_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_c,tuesday_pm_class)
-
         def student_d_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_d,tuesday_pm_class)
+
+
+        def regSheet_a = RegistrationSheet.findByRegSheetNumber('R111') ?:
+                      new RegistrationSheet(course:web_arch_course,sheetDate:new Date(),notes:'note',regSheetNumber:'R111').save(failOnError:true);
+       
+
         
         
         

@@ -5,7 +5,7 @@ class RegisterEntry {
 
   /* name of the student signing the registery sheet */
   Student student 
-
+ 
   RegistrationSheet regSheet
 
   /* adding a date and time for the student signing the reg sheet */

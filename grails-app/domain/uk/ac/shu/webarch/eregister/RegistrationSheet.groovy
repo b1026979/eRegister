@@ -2,6 +2,8 @@ package uk.ac.shu.webarch.eregister
 
 class RegistrationSheet {
 
+  String regSheetNumber
+
   /* the course name for the sheet */
   Course course 
 
