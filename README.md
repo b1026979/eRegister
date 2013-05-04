@@ -1,5 +1,4 @@
-eRegister
-=========
+
 
 eRegister App
 =============
