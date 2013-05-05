@@ -20,7 +20,7 @@ class RegClass {
   static hasMany = [enrolledStudents:Enrollment, regSheets:RegistrationSheet]
 
   /* with mappedBy the class knows to use the student property of the Enrollment class as a forign key  */
-  static mappedBy = [enrolledStudents: 'regClass']
+  static mappedBy = [enrolledStudents: 'regClass', regSheets:'regClass']
 
   static constraints = {
     classInstructor(nullable:false, blank:false, maxsize:256);

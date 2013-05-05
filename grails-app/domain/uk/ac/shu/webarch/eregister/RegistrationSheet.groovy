@@ -4,7 +4,7 @@ class RegistrationSheet {
 
   String regSheetNumber
 
-  /* the course name for the sheet */
+  /* any registrationSheet has 1 RegClass */
   RegClass regClass 
 
   /* date of the sheet */
