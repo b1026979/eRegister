@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'course', 'error')} required">
-	<label for="course">
-		<g:message code="registrationSheet.course.label" default="Course" />
+<div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'regClass', 'error')} required">
+	<label for="regClass">
+		<g:message code="registrationSheet.regClass.label" default="Reg Class" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="course" name="course.id" from="${uk.ac.shu.webarch.eregister.Course.list()}" optionKey="id" required="" value="${registrationSheetInstance?.course?.id}" class="many-to-one"/>
+	<g:select id="regClass" name="regClass.id" from="${uk.ac.shu.webarch.eregister.RegClass.list()}" optionKey="id" required="" value="${registrationSheetInstance?.regClass?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'sheetDate', 'error')} required">
@@ -24,6 +24,14 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="notes" required="" value="${registrationSheetInstance?.notes}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'regSheetNumber', 'error')} ">
+	<label for="regSheetNumber">
+		<g:message code="registrationSheet.regSheetNumber.label" default="Reg Sheet Number" />
+		
+	</label>
+	<g:textField name="regSheetNumber" value="${registrationSheetInstance?.regSheetNumber}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'signatories', 'error')} ">

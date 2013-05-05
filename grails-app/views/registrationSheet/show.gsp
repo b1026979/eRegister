@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list registrationSheet">
 			
-				<g:if test="${registrationSheetInstance?.course}">
+				<g:if test="${registrationSheetInstance?.regClass}">
 				<li class="fieldcontain">
-					<span id="course-label" class="property-label"><g:message code="registrationSheet.course.label" default="Course" /></span>
+					<span id="regClass-label" class="property-label"><g:message code="registrationSheet.regClass.label" default="Reg Class" /></span>
 					
-						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${registrationSheetInstance?.course?.id}">${registrationSheetInstance?.course?.courseName.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="regClass-label"><g:link controller="regClass" action="show" id="${registrationSheetInstance?.regClass?.id}">${registrationSheetInstance?.regClass?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -50,12 +50,21 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${registrationSheetInstance?.regSheetNumber}">
+				<li class="fieldcontain">
+					<span id="regSheetNumber-label" class="property-label"><g:message code="registrationSheet.regSheetNumber.label" default="Reg Sheet Number" /></span>
+					
+						<span class="property-value" aria-labelledby="regSheetNumber-label"><g:fieldValue bean="${registrationSheetInstance}" field="regSheetNumber"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${registrationSheetInstance?.signatories}">
 				<li class="fieldcontain">
 					<span id="signatories-label" class="property-label"><g:message code="registrationSheet.signatories.label" default="Signatories" /></span>
 					
 						<g:each in="${registrationSheetInstance.signatories}" var="s">
-						<span class="property-value" aria-labelledby="signatories-label"><g:link controller="registerEntry" action="show" id="${s.id}">${s?.student?.fullStudentName.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="signatories-label"><g:link controller="registerEntry" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

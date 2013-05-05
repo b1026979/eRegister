@@ -24,11 +24,13 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="registrationSheet.course.label" default="Course" /></th>
+						<th><g:message code="registrationSheet.regClass.label" default="Reg Class" /></th>
 					
 						<g:sortableColumn property="sheetDate" title="${message(code: 'registrationSheet.sheetDate.label', default: 'Sheet Date')}" />
 					
 						<g:sortableColumn property="notes" title="${message(code: 'registrationSheet.notes.label', default: 'Notes')}" />
+					
+						<g:sortableColumn property="regSheetNumber" title="${message(code: 'registrationSheet.regSheetNumber.label', default: 'Reg Sheet Number')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +38,13 @@
 				<g:each in="${registrationSheetInstanceList}" status="i" var="registrationSheetInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "course")}</g:link></td>
+						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "regClass")}</g:link></td>
 					
 						<td><g:formatDate date="${registrationSheetInstance.sheetDate}" /></td>
 					
 						<td>${fieldValue(bean: registrationSheetInstance, field: "notes")}</td>
+					
+						<td>${fieldValue(bean: registrationSheetInstance, field: "regSheetNumber")}</td>
 					
 					</tr>
 				</g:each>
