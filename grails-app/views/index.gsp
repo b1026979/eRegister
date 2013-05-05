@@ -29,6 +29,11 @@
 		<g:link controller="Enrollment">Manage Enrollment</g: link>
 		</p>
 		<p><lo>
+		<g:link controller="Apply">Apply</g: link>
+			<li><g:link controller="apply" action="listActiveClasses">List of active attendance</g: link>
+			<li><g:link controller="apply" action="index">Proccess attendance</g: link>
+		</p>		
+		<p><lo>
 		<g:link controller="Classes">Manage Classes</g: link>
 			<li><g:link controller="Classes.json">json format</g: link>
 			<li><g:link controller="Classes.xml">xml format</g: link>

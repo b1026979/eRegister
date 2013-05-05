@@ -9,7 +9,7 @@ class RegClass {
   /* the ClassInstractor is the foreign key from the class Instractor , it tells us who is teaching the class */
   Instructor classInstructor 
 
-  /* decleares about the course */
+  /* Class has one course */
   Course course 
 
   /* the set of enrolled students on this class */

@@ -29,14 +29,29 @@ import grails.converters.*
   }
   
   def listActiveClasses(){
-   def result= [:]
-   result.allClasses=[]
-   RegClass.list().each{ cls ->
-     println("class:${cls}")
-     result.allClasses.add(cls)
+    def result= [:]
+    result.allClasses=[]
+    RegClass.list().each{ cls ->
+       println("class:${cls}")
+       boolean inc_class = false
+       def signedSheets = 0
+       cls.regSheets.each { sheet ->
+       if(sheet.signatories?.size() > 0)
+          signedSheets++
+       }
+
+       if (signedSheets > 0){
+       result.allClasses.add(cls)
+       }
    }
  
    return result
   
   }
+  def listActiveSummary(){
+
+    
+  }
+
+
 }
