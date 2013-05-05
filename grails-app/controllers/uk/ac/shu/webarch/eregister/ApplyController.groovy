@@ -32,7 +32,7 @@ import grails.converters.*
    def result= [:]
    result.allClasses=[]
    RegClass.list().each{ cls ->
-     println("class:${cls} 
+     println("class:${cls}")
      result.allClasses.add(cls)
    }
  

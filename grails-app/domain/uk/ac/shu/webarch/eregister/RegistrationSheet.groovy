@@ -19,7 +19,7 @@ class RegistrationSheet {
   static mappedby = [classes : 'student']
 
   static constraints = {
-    course(nullable:false, blank:false);
+    regClass(nullable:false, blank:false);
     sheetDate(nullable:false, blank:false);
     notes(nullable:false, blank:false);
   }

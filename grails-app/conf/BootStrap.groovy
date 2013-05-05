@@ -41,7 +41,7 @@ class BootStrap {
 
 
         def regSheet_a = RegistrationSheet.findByRegSheetNumber('R111') ?:
-                      new RegistrationSheet(course:web_arch_course,sheetDate:new Date(),notes:'note',regSheetNumber:'R111').save(failOnError:true);
+                      new RegistrationSheet(regClass:monday_pm_class,sheetDate:new Date(),notes:'note',regSheetNumber:'R111').save(failOnError:true);
        
 
         
