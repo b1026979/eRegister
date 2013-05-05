@@ -5,7 +5,7 @@ class RegistrationSheet {
   String regSheetNumber
 
   /* the course name for the sheet */
-  Course course 
+  RegClass regClass 
 
   /* date of the sheet */
   Date sheetDate

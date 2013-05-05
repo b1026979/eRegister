@@ -14,10 +14,10 @@ class RegClass {
 
   /* the set of enrolled students on this class */
   Set enrolledStudents
-
+  Set regSheets
  
   /* below we address the class enrolment to the current class with a has many student enrolling relationship that is a   hasMany relationship */
-  static hasMany = [enrolledStudents:Enrollment]
+  static hasMany = [enrolledStudents:Enrollment, regSheets:RegistrationSheet]
 
   /* with mappedBy the class knows to use the student property of the Enrollment class as a forign key  */
   static mappedBy = [enrolledStudents: 'regClass']
