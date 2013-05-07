@@ -6,7 +6,7 @@
 
 	</head>
 	<body>
-		<p> This is eRegister</p>
+		<p><strong> This is eRegister</strong></p>
 		<p>
 		<g:link controller="Instructor">Manage Instructors</g: link>
 		</p>
@@ -29,12 +29,13 @@
 		<g:link controller="Enrollment">Manage Enrollment</g: link>
 		</p>
 		<p><lo>
-		<g:link controller="Apply">Apply</g: link>
+		<g:link controller="Apply"><strong>Apply</strong></g: link>
 			<li><g:link controller="apply" action="listActiveClasses">List of active attendance</g: link>
 			<li><g:link controller="apply" action="index">Proccess attendance</g: link>
+                        <li><g:link controller="apply" action="listAttendeesSummary">Percentage attendance</g: link>
 		</p>		
 		<p><lo>
-		<g:link controller="Classes">Manage Classes</g: link>
+		<g:link controller="Classes"><strong>Manage Classes</strong></g: link>
 			<li><g:link controller="Classes.json">json format</g: link>
 			<li><g:link controller="Classes.xml">xml format</g: link>
 		</p></lo>

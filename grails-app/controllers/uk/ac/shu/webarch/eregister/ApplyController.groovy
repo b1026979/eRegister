@@ -48,10 +48,25 @@ import grails.converters.*
    return result
   
   }
-  def listActiveSummary(){
+  def listAttendeesSummary(){
+           
+	   def result= [:]
+           result.allAttendance=[]
+         
 
-    
+           if(params.NameId){
+      
+           
+            def regClass_a = RegClass.findByName(params.NameId)
+
+            result.Sheets=regClass_a.regSheets
+
+           println("Looked up regClass is ${regClass_a}");
+
+           }
+
   }
-
+  
+             
 
 }
