@@ -12,8 +12,8 @@ Electronic attendance registers for lectures
 In this project, I introduce a web based register app. You can use this app to sign a registration sheet for a course session. As a result, the app can give you a list of students, the lecturer and the date of signed registration sheet for a particular class in three different formats HTML, XML and JSON.
 
 Configuration(How to run and checkout the app)
-=============
-To install and set up the application:
+----------------------------------------------
+*To install and set up the application:
 1-  Install the required packages: Debian6, Java7, MySQL, Grails packages installed on your computer.(I assumed you are using the same Debian image in your VMware machine as the university computers)
 
 2-	To clone the project into your computer
