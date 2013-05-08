@@ -98,7 +98,7 @@ environments {
 
  a)         List of active attendance: this link directs you to a page that shows the classes they have more than one attendance signed in.
  
- b)         Process Attendance: this links direct you to a page that you can enter an student ID and a class ID and it gets and sends the data true the URL, also replying through command line.
+ b)         Process Attendance: this links direct you to a page that you can enter an student ID and a class ID and it gets and sends the data true the URL, also replying through command line.To get a response from classes I have defined an student called'A111' and a class called 'R111'to input in the fields.
  
  c)         Classes: this is the link to the Instructors and the classes they lecture in the form of HTTP, XML and JSON.
 
