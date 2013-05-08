@@ -8,7 +8,7 @@ To achieve this I used GitHub and Grails apps plus using command line in Debian 
 The purpose of this project is to gather a portfolio toward exploring the aspects of MVC.
 
 Electronic attendance registers for lectures
-============================================
+--------------------------------------------
 In this project, I introduce a web based register app. You can use this app to sign a registration sheet for a course session. As a result, the app can give you a list of students, the lecturer and the date of signed registration sheet for a particular class in three different formats HTML, XML and JSON.
 
 Configuration(How to run and checkout the app)
