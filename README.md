@@ -14,7 +14,7 @@ In this project, I introduce a web based register app. You can use this app to s
 Configuration(How to run and checkout the app)
 ----------------------------------------------
 -> To install and set up the application:
-.........
+
 1-  Install the required packages: Debian6, Java7, MySQL, Grails packages installed on your computer.(I assumed you are using the same Debian image in your VMware machine as the university computers)
 
 2-	To clone the project into your computer
