@@ -15,6 +15,7 @@ Configuration(How to run and checkout the app)
 =============
 To install and set up the application:
 1-  Install the required packages: Debian6, Java7, MySQL, Grails packages installed on your computer.(I assumed you are using the same Debian image in your VMware machine as the university computers)
+
 2-	To clone the project into your computer
  a)	Click on the SSH tab and copy the link next to it
  b)	In the Debian command line(Terminal) type: git clone<paste the copied link here) and Enter.
@@ -52,10 +53,14 @@ environments {
 4-	 Run athe pp by running grails 
  a)           Enter into your eRegister directory by typing: cd eRegister into command line
  b)           Run the grails with typing: grails run-app  in command line.
+ 
 5-	Copy the link given by grails and paste it into your browser URL and Enter.
+
 6-	You will be directed to the app’s homepage.
+
 7-         In the home page you have links to:
  a)         Manage the classes, insert, edit or delete data.
+ 
 8)         Links under Apply:
  a)         List of active attendance: this link directs you to a page that shows the classes they have more than one attendance signed in.
  b)         Process Attendance: this links direct you to a page that you can enter an student ID and a class ID and it gets and sends the data true the URL, also replying through command line.
